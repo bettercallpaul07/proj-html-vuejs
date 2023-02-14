@@ -1,0 +1,30 @@
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin container  {
+	max-width: 80vw;
+	margin: 0 auto;
+}
+
+@mixin icon {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	line-height: 2rem;
+	padding: 0.5rem;
+}
+
+@mixin btn {
+	border: 0;
+	border-radius: 0.2rem;
+	padding: 10px 20px;
+
+}
+
+@mixin cardsquare {
+
+
+}
