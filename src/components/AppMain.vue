@@ -8,7 +8,7 @@ import AppUpcoming from "./AppUpcoming.vue";
 import AppTeam from "./AppTeam.vue";
 import AppTestimonial from "./AppTestimonial.vue";
 import AppShop from "./AppShop.vue";
-
+import AppNews from "./AppNews.vue";
 
 
 
@@ -25,7 +25,8 @@ export default {
         AppUpcoming,
         AppTeam,
         AppTestimonial,
-        AppShop
+        AppShop,
+        AppNews
     },
 
     };
@@ -44,6 +45,7 @@ export default {
         <AppTeam />
         <AppTestimonial />
         <AppShop />
+        <AppNews />
 
     </main>
 
