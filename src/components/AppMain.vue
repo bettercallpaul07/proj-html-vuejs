@@ -12,10 +12,6 @@ import AppShop from "./AppShop.vue";
 
 
 
-
-
-
-
 export default {
     name: "AppMain",
     data() { return {

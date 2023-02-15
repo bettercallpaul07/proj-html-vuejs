@@ -1,13 +1,12 @@
-
 // Importo il font
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 
 // Importo reset e variables
- @import "partials/reset.scss";
- @import "partials/variables.scss";
- @import "partials/mixins.scss";
+@import "partials/reset.scss";
+@import "partials/variables.scss";
+@import "partials/mixins.scss";
 
 
 //Imposto il font
@@ -21,17 +20,20 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 700px;
+}
 
+.dflex {
+    display: flex;
 }
 
 .left {
-	width: 40%;
-    min-height: 700px;
+    width: 40%;
+    min-height: 500px;
 }
 
 .right {
-	width: 40%;
-    min-height: 700px;
+    width: 40%;
+    min-height: 500px;
 
 }
 
@@ -50,7 +52,7 @@ body {
         font-weight: bold;
     }
 
-    img  {
+    img {
         @include icon;
         background-color: $txt-secondary;
         max-height: 100%;
@@ -58,5 +60,218 @@ body {
         line-height: 2rem;
 
     }
+
+}
+
+.cardtypeone {
+    min-height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+
+
+    img {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background-color: $darkblue-bg;
+        padding: 10px;
+
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        padding-top: 0.6rem;
+        padding-bottom: 0.3rem;
+
+    }
+
+    p {
+        padding: 0.3rem;
+        font-size: 0.6rem;
+    }
+
+}
+
+section {
+
+    h5 {
+        color: $txt-secondary;
+    }
+
+    h2 {
+        color: $txt-primary;
+    }
+
+    h6 {
+        color: $txt-primary;
+    }
+
+    p {
+        color: $txt-primary;
+    }
+}
+
+.littleContainer {
+    max-width: 600px;
+    max-height: 800px;
+}
+
+.horizontalCard {
+    height: 180px;
+    width: 700px;
+    border-radius: 1rem;
+    border: 1px solid $txt-secondary;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.battleCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .battleContainer {
+        text-align: center;
+
+        img {
+            width: 100px;
+            height: 80px;
+            padding: 0.5rem;
+            background-color: $darkblue-bg;
+
+        }
+
+        .txtContainer {
+            width: 100px;
+            height: 50px;
+            background-color: $card;
+            text-align: left;
+            padding: 0.4rem;
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .versus {
+
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            width: 60px;
+            height: 60px;
+            background-color: $darkblue-bg;
+            color: $txt-secondary;
+            font-weight: bold;
+        }
+    }
+
+    .battle-txt {
+        margin: 1rem;
+        font-size: 0.6rem;
+
+        p {
+            padding-top: 1rem;
+            line-height: 1rem;
+        }
+
+    }
+
+    .hour {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        margin-left: 0.5rem;
+        font-size: 0.6rem;
+        background-color: $txt-secondary;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        h4 {
+            color: black;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        h6 {
+            color: black;
+
+        }
+
+        img {
+            @include icon;
+            filter: invert(1);
+            background-color: $txt-primary;
+        }
+
+        .hourIcon {
+            display: flex;
+
+            img {
+                margin: 0.3rem;
+            }
+        }
+
+    }
+
+}
+
+.arrowList {
+
+    text-align: end;
+
+    img {
+        @include icon;
+        background-color: $txt-primary;
+        margin-left: 0.5rem;
+    }
+
+    .green {
+        background-color: $txt-secondary;
+    }
+}
+
+.mediumContainer {
+    max-width: 800px;
+    max-height: 700px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.cardTypeTwo {
+    width: 250px;
+    max-height: 300px;
+    border: 1px solid black;
+
+    .imgContainer img {
+        max-height: 90%;
+        max-width: 100%;
+    }
+    .txtContainer {
+        background-color: $darkblue-bg;
+        font-size: 0.7rem;
+        padding: 0.4rem;
+
+    }
+
+
 
 }
