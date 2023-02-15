@@ -98,14 +98,7 @@ section {
     background-image: url(../assets/img/png/Vector.png);
     height: 600px;
 
-    .title-section {
-        text-align: left;
 
-        h5 {
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-        }
-    }
 
     .arrowList {
         padding-top: 1rem;

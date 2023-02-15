@@ -140,7 +140,7 @@ export default {
 <style lang="scss" scoped>
 section {
     background-color: $darkblue-bg;
-    height: 700px;
+    height: 800px;
 
     .txtContainer {
         padding-bottom: 0.5rem;
@@ -159,9 +159,11 @@ section {
         display: flex;
         align-items: center;
 
+
         .card {
             width: 25%;
             margin-right: 1rem;
+
 
             img {
                 width: 100%;

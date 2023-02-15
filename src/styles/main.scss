@@ -262,12 +262,12 @@ section {
 .cardTypeTwo {
     width: 250px;
     max-height: 300px;
-    border: 1px solid black;
 
     .imgContainer img {
         max-height: 90%;
         max-width: 100%;
     }
+
     .txtContainer {
         background-color: $darkblue-bg;
         font-size: 0.7rem;
@@ -277,4 +277,19 @@ section {
 
 
 
+}
+
+.title-section {
+    text-align: left;
+
+    padding-bottom: 1rem;
+    width: 60%;
+
+    h5 {
+        padding-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
 }
