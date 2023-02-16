@@ -1,17 +1,9 @@
 <script>
 
-
-
-
 import Navbar from "./Navbar.vue";
-
 
 export default {
     name: "AppHeader",
-    data() {
-        return {
-        };
-    },
     components: {
         Navbar
     },

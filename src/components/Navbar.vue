@@ -1,8 +1,49 @@
 <script>
 
+
+
+
+
 export default {
     name: "Navbar",
+    data() {
+        return {
+            links: [
+                {
+                    label: 'Home',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Pages',
+                    url: '#',
+                    active: true
+                },
+                {
+                    label: 'Tournament',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Shop',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Blog',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Contact',
+                    url: '#',
+                    active: false
+                },
+            ]
+        };
+    },
 }
+
 
 </script>
 
@@ -15,13 +56,10 @@ export default {
         <!-- menù di navigazione -->
         <div class="menu">
             <ul>
-                <li>
-                    <a href="#">Home</a>
-                    <a href="#">Pages</a>
-                    <a href="#">Tournament</a>
-                    <a href="#">Shop</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact</a>
+                <li v-for="element in links" :class="{ active: element.active == true }">
+                    <a :href="element.url">
+                        {{ element.label }}
+                    </a>
                 </li>
             </ul>
         </div>
@@ -36,8 +74,8 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-	max-width: 80vw;
-	margin: 0 auto;
+    max-width: 80vw;
+    margin: 0 auto;
     padding: 0.5rem;
     height: 100px;
     display: flex;
@@ -55,18 +93,25 @@ export default {
     .menu {
         ul li {
             list-style: none;
+            display: inline-block;
+        }
 
-            a {
-                padding: 0rem 1rem;
-                color: $txt-primary;
-                text-transform: uppercase;
-                text-decoration: none;
+        a {
+            padding: 0rem 1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $txt-primary;
+
+            &:hover {
+                color: lightgreen;
+
             }
         }
     }
 
     .ic-li {
         display: flex;
+
         img {
             @include icon;
             margin: 0 0.3rem;

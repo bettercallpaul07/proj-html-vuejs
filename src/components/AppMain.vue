@@ -14,7 +14,8 @@ import AppNews from "./AppNews.vue";
 
 export default {
     name: "AppMain",
-    data() { return {
+    data() {
+        return {
     }
     },
         components: {
