@@ -1,5 +1,6 @@
 <script>
 
+
 export default {
     name: "AppFooter",
 }
@@ -7,7 +8,6 @@ export default {
 </script>
 
 <template>
-
     <footer>
         <div class="newsletter">
             <div class="nsText">
@@ -65,11 +65,7 @@ export default {
                 </div>
             </div>
         </div>
-    </footer>
-
-
-
-
+</footer>
 </template>
 
 <style lang="scss" scoped>
@@ -77,12 +73,11 @@ footer {
 
     .newsletter {
         position: absolute;
-        width: 800px;
+        width: 50%;
         margin: 0 auto;
-        height: 125px;
-        position: absolute;
-        top: -75px;
-        left: 200px;
+        min-height: 125px;
+        top: -25%;
+        left: 25%;
         background-color: $blue-bg;
         display: flex;
         align-items: center;
@@ -157,6 +152,7 @@ footer {
     max-height: 300px;
     padding-top: 5rem;
     padding-bottom: 1rem;
+    width: 100%;
 
 
     .mediumContainer {

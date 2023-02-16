@@ -1,48 +1,39 @@
 <script>
 
+
+
+
+import Navbar from "./Navbar.vue";
+
+
 export default {
     name: "AppHeader",
-}
+    data() {
+        return {
+        };
+    },
+    components: {
+        Navbar
+    },
+
+}//export
 
 </script>
 
 <template>
-
     <header>
         <div class="main-header">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="../assets/img/png/menulogo.png" alt="logo">
-                </div>
 
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                            <a href="#">Pages</a>
-                            <a href="#">Tournament</a>
-                            <a href="#">Shop</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Contact</a>
+            <Navbar />
 
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="ic-li">
-                    <img class=icon src="../assets/img/svg/search.svg" alt="search">
-                    <img class=icon src="../assets/img/svg/shoppingbag.svg" alt="shop">
-
-                </div>
-            </div>
             <div class="main-title">
                 <div class="vertical-list">
                     <img src="../assets/img/svg/facebook.svg" alt="facebook">
                     <img src="../assets/img/svg/twitter.svg" alt="twitter">
                     <img src="../assets/img/svg/linkedin.svg" alt="linkedin">
                     <img src="../assets/img/svg/instagram.svg" alt="instagram">
-
                 </div>
+
                 <div class="title">
                     <h5>Welcome to Raxg</h5>
                     <h1>Are you ready for your next challenge?</h1>
@@ -56,8 +47,6 @@ export default {
 
                 </div>
             </div>
-
-
         </div>
 
         <div class="discover">
@@ -123,111 +112,66 @@ export default {
 
 
         </div>
-    </header>
-
-
-
+</header>
 </template>
 
 <style lang="scss" scoped>
 header {
-    min-height: 100vh;
 
     .main-header {
         background-image: url("../assets/img/png/banner1.png");
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 700px;
-        width: 100%;
 
-        .navbar {
-            @include container;
-            padding: 0.5rem;
-            height: 100px;
+        .main-title {
+            width: 80%;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            margin-top: 8rem;
+            text-transform: uppercase;
+            position: relative;
 
-            .logo {
-                height: 80%;
+            .vertical-list {
+                display: flex;
+                flex-direction: column;
+                height: 100px;
+                width: 50px;
+                position: absolute;
+                left: 0;
+                top: 0;
 
                 img {
-                    max-width: 100%;
-                }
-
-            }
-
-            .menu {
-                ul li {
-                    list-style: none;
-
-                    a {
-                        padding: 0rem 1rem;
-                        color: $txt-primary;
-                        text-transform: uppercase;
-                        text-decoration: none;
-                    }
-                }
-            }
-
-            .ic-li {
-                img {
-                    @include icon;
-                    margin: 0 0.3rem;
                     background-color: white;
-                    display: inline;
+                    @include icon;
+                    margin-top: 1rem;
+                    max-height: 100%;
+                }
+            }
+
+            .title {
+                h1 {
+                    width: 60%;
+                    margin: 0 auto;
+                    line-height: 5rem;
+                    text-align: center;
+                    color: $txt-primary;
+                    font-size: 4rem;
+                }
+
+                h5 {
+                    text-align: center;
+                    color: $txt-secondary;
+
+                }
+
+                .btn-container {
+                    margin: 0 auto;
                 }
             }
         }
-    }
-
-    .main-title {
-        @include container;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 13rem;
-        text-transform: uppercase;
-        position: relative;
-
-        .vertical-list {
-            display: flex;
-            flex-direction: column;
-            height: 100px;
-            width: 50px;
-            position: absolute;
-            left: 0;
-            top: 0;
-
-            img {
-                background-color: white;
-                @include icon;
-                margin-top: 1rem;
-                max-height: 100%;
-            }
-        }
-
-        .title {
-            h1 {
-                width: 60%;
-                margin: 0 auto;
-                line-height: 5rem;
-                text-align: center;
-                color: $txt-primary;
-                font-size: 4rem;
-            }
-
-            h5 {
-                text-align: center;
-                color: $txt-secondary;
-
-            }
-
-            .btn-container {
-                margin: 0 auto;
-            }
-        }
-
     }
 
     .list-header {
@@ -241,11 +185,11 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 1rem;
 
         img {
-            padding: 1.5rem 3rem;
-            width: calc(100%/6);
-            height: 100%;
+            width: 80px;
+            height: 80px;
         }
     }
 
@@ -327,39 +271,39 @@ header {
             left: 5%;
             min-height: 500px;
 
-            
-        h5 {
-            color: $txt-secondary;
-            padding-bottom: 1rem;
-        }
 
-        h2 {
-            color: $txt-primary;
-            padding-bottom: 2rem;
-            font-size: 2.5rem;
-
-        }
-
-        p {
-            color: $txt-primary;
-            padding-bottom: 2rem;
-            line-height: 1.5rem;
-        }
-
-        ul li {
-            list-style: none;
-            color: white;
-            padding-bottom: 1rem;
-
-            span {
-                border: 1px solid $txt-secondary;
-                border-radius: 50%;
+            h5 {
                 color: $txt-secondary;
-                padding: 0.1rem;
-                margin-right: 0.5rem;
+                padding-bottom: 1rem;
             }
 
-        }
+            h2 {
+                color: $txt-primary;
+                padding-bottom: 2rem;
+                font-size: 2.5rem;
+
+            }
+
+            p {
+                color: $txt-primary;
+                padding-bottom: 2rem;
+                line-height: 1.5rem;
+            }
+
+            ul li {
+                list-style: none;
+                color: white;
+                padding-bottom: 1rem;
+
+                span {
+                    border: 1px solid $txt-secondary;
+                    border-radius: 50%;
+                    color: $txt-secondary;
+                    padding: 0.1rem;
+                    margin-right: 0.5rem;
+                }
+
+            }
 
         }
 
