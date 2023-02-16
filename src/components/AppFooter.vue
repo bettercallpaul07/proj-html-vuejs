@@ -32,8 +32,6 @@ export default {
         </div>
 
 
-
-
         <div class="mediumContainer">
             <div class="upper dflex">
                 <div class="logo">

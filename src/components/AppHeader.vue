@@ -1,5 +1,6 @@
 <script>
 
+
 import Navbar from "./Navbar.vue";
 
 export default {
@@ -140,6 +141,10 @@ header {
                     @include icon;
                     margin-top: 1rem;
                     max-height: 100%;
+
+                    &:hover {
+                        background-color: lightgreen;
+                    }
                 }
             }
 
@@ -197,6 +202,7 @@ header {
 
     .left {
         position: relative;
+        margin-top: 10rem;
 
         #shadow {
             position: absolute;

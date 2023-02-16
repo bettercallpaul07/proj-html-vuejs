@@ -1,5 +1,6 @@
 <script>
 
+
 export default {
     name: "AppTeam",
 }
@@ -7,7 +8,6 @@ export default {
 </script>
 
 <template>
-
     <section>
         <div class="mediumContainer">
             <div class="title-section">
@@ -82,11 +82,7 @@ export default {
 
 
 
-    </section>
-
-
-
-
+</section>
 </template>
 
 <style lang="scss" scoped>
@@ -105,6 +101,10 @@ section {
 
             .txtContainer {
                 background-color: $card;
+
+                &:hover {
+                    background-color: lightgreen;
+                }
 
                 h3 {
                     font-weight: bold;
