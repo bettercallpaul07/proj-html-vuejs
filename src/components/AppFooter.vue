@@ -1,8 +1,47 @@
 <script>
 
 
+
+
+
 export default {
     name: "AppFooter",
+    data() {
+        return {
+            links: [
+                {
+                    label: 'Home',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Pages',
+                    url: '#',
+                    active: true
+                },
+                {
+                    label: 'Tournament',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Shop',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Blog',
+                    url: '#',
+                    active: false
+                },
+                {
+                    label: 'Contact',
+                    url: '#',
+                    active: false
+                },
+            ]
+        };
+    },
 }
 
 </script>
@@ -39,12 +78,11 @@ export default {
                 </div>
                 <div>
                     <ul>
-                        <li>Home</li>
-                        <li>Pages</li>
-                        <li>Tournament</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
+                        <li v-for="element in links" :class="{ active: element.active == true }">
+                            <a :href="element.url">
+                                {{ element.label }}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -174,6 +212,19 @@ footer {
                 padding-right: 0.5rem;
                 text-transform: uppercase;
                 font-weight: bold;
+
+
+                a {
+                    padding: 0rem 0.2rem;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $txt-primary;
+
+                    &:hover {
+                        color: lightgreen;
+
+                    }
+                }
             }
 
         }
